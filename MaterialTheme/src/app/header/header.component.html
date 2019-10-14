@@ -1,0 +1,16 @@
+<mat-toolbar class="" id="toolbar" color="primary">
+  <button mat-button (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+ <span class="example-spacer"></span>
+
+ 	<!-- <mat-slide-toggle (change)='onChange($event.checked)'>黑夜模式</mat-slide-toggle>  -->
+ 	<button mat-button (click)='toggleDarkTheme.emit()'>Dark Theme</button> 
+ 	<button mat-button (click)="togglePurpleTheme.emit()">Purple Theme</button> 
+ 	<button mat-button (click)="toggleGreyTheme.emit()">Grey Theme</button> 
+ 	<button mat-button (click)="togglePinkTheme.emit()">Pink Theme</button> 
+   <button mat-button (click)="toggleSidenavRight.emit()" fxHide.lt-sm id="right">
+    <mat-icon id="list">list</mat-icon>
+  </button>
+</mat-toolbar>

@@ -1,0 +1,14 @@
+<mat-sidenav-container [class.myapp-dark-theme]="darkTheme" [class.myapp-grey-theme]="GreyTheme"
+[class.myapp-purple-theme]="purplrTheme" [class.myapp-pink-theme]="pinkTheme"><!-- 默认主题Material自带的一个-->
+  <mat-sidenav #sidenav position="start" mode="side" opened="true">
+    <app-sidenavleft></app-sidenavleft>
+  </mat-sidenav> 
+  <mat-sidenav #sidenavRight position="end" mode="side" opened="false">
+    <app-sidenavright></app-sidenavright>
+  </mat-sidenav> 
+  <mat-sidenav-content>
+    <app-header (toggleSidenav)="sidenav.toggle()"
+    (toggleSidenavRight)="sidenavRight.toggle()" (toggleDarkTheme)="switchDarkTheme()" (toggleGreyTheme)="switchGreyTheme()" (togglePurpleTheme)="switchPurpleTheme()" (togglePinkTheme)="switchPinkTheme()"></app-header>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+ </mat-sidenav-container>

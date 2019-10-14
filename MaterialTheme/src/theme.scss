@@ -1,0 +1,49 @@
+/*引入material自定义主题支持*/
+@import '~@angular/material/theming';
+/*引入material公用的主题风格*/
+@include mat-core();
+/*这是我设置的默认主题哦*/
+/*$my-app-primary: mat-palette($mat-blue,800);
+$my-app-accent: mat-palette($mat-teal,600);
+$my-app-warn: mat-palette($mat-red,700);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);*/
+
+
+// 自定义颜色
+$my-dark-primary: mat-palette($mat-blue,800);
+$my-dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$my-dark-warn: mat-palette($mat-red,600);
+
+// 利用自定义颜色组装自定义主题
+$my-dark-theme: mat-dark-theme($my-dark-primary, $my-dark-accent, $my-dark-warn);
+
+// 设置自定义主题，使其生效
+.myapp-dark-theme {
+    @include angular-material-theme($my-dark-theme);
+}
+
+
+$my-grey-primary: mat-palette($mat-grey,600);
+$my-grey-accent: mat-palette($mat-pink,400);
+$my-grey-warn: mat-palette($mat-red,500);
+$my-grey-theme: mat-light-theme($my-grey-primary, $my-grey-accent, $my-grey-warn);
+.myapp-grey-theme {
+    @include angular-material-theme($my-grey-theme);
+}
+
+$my-purple-primary: mat-palette($mat-purple,700);
+$my-purple-accent: mat-palette($mat-amber, 200);
+$my-purple-warn: mat-palette($mat-deep-orange,600);
+$my-purple-theme: mat-dark-theme($my-purple-primary, $my-purple-accent, $my-purple-warn);
+.myapp-purple-theme {
+    @include angular-material-theme($my-purple-theme);
+}
+
+$my-pink-primary: mat-palette($mat-pink,800);
+$my-pink-accent: mat-palette($mat-amber, A200, A100, A400);
+$my-pink-warn: mat-palette($mat-deep-orange);
+$my-pink-theme: mat-light-theme($my-pink-primary, $my-pink-accent, $my-pink-warn);
+.myapp-pink-theme {
+    @include angular-material-theme($my-pink-theme);
+}
